@@ -28,7 +28,7 @@ void instructions::remove_comment_whitespace()
 {
     ifstream vmfile (vm_file_name);
     if (!vmfile.is_open())
-        perror("ERROR OPENING ASM FILE");
+        perror("ERROR WHILE OPENING VM FILE");
 
     while(getline(vmfile, current_line)) 
     {
@@ -54,7 +54,7 @@ void instructions::remove_comment_whitespace()
         cout<<"----------BOF----------"<<endl;
         for (vector<string>::const_iterator i = file_content.begin(); i != file_content.end(); ++i)
         {
-            cout <<"ASM LINE["<<index<<"]: "<< *i << endl;
+            cout <<"VM LINE["<<index<<"]: "<< *i << endl;
             index++;
         }
         cout<<"----------EOF----------"<<endl<<endl;
@@ -493,7 +493,7 @@ void instructions::writefile()
     ofstream asmfile;
     asmfile.open (asm_file_name);
     if (!asmfile.is_open())
-        perror("ERROR OPENING ASM FILE");
+        perror("ERROR WHILE OPENING ASM FILE");
 
     //Read vector and append to file    
     for (vector<string>::const_iterator i = machinecode.begin(); i != machinecode.end(); ++i)

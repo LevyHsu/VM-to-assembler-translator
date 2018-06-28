@@ -14,9 +14,9 @@ will generate test.asm (with same name)
 
 Debug with extra info:
 ```bash
-./main.out test.asm -v
+./main.out test.vm -v
 ```
+
 All the white spaces and comments are ignored (content after // in any single line)
 
-### Supports:
 
